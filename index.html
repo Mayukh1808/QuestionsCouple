@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-Surprise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container" style="height: 100vh; width: 100%; display: flex;">
+        <div class="gif">
+            <div class="flottedheading">
+                <h1>Hi Mitu Mb <br>here....❤️</h1>
+            </div>
+            <img src="./assets/tkthao219-bubududu.gif" alt="" class="dudu">
+        </div>
+        <div class="cards">
+            <div class="wapper">
+                <img src="./assets/dudu-dance.gif" alt="" style="height: 100px; width: 100px;">
+                <h2 class="question">Do you love me?</h2>
+                <div class="btn-group">
+                    <a href="index2.html" class="btn-group"><button class="yes-btn">Yes</button></a>
+                    <button class="no-btn" onclick="mouseover">No</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script>
+    const wapper = document.querySelector('.wapper');
+    const question = document.querySelector('.question');
+    const yes = document.querySelector('.yes-btn');
+    const Nob = document.querySelector('.no-btn');
+    const wrapperRect = wapper.getBoundingClientRect();
+    const noBtnRect = Nob.getBoundingClientRect();
+    Nob.addEventListener('mouseover', () => {
+        const i = Math.floor(Math.random() * (wrapperRect.width - noBtnRect.width)) + 1;
+        const j = Math.floor(Math.random() * (wrapperRect.height - noBtnRect.height)) + 1;
+        Nob.style.left = i + 'px';
+        Nob.style.top = j + 'px';
+    });
+</script>
+
+</html>
